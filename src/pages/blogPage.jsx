@@ -18,7 +18,17 @@ const CardData = [
 
 const BlogPage = ({ onCardClick }) => {
   const [visibleCard, setVisibleCard] = useState(3);
-
+  // const [showDetailPage, setShowDetailPage] = useState(false);
+  // const handleMenuClick = (index) => {
+  //   if (showDetailPage) {
+  //     setShowDetailPage(false); // Reset to normal view
+  //     setTimeout(() => {
+  //       ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  //     }, 300);
+  //   } else {
+  //     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   }
+  // };
   const handleSeeMore = () => {
     setVisibleCard((prev) => Math.min(prev + 3, CardData.length));
   };
@@ -60,12 +70,14 @@ const BlogPage = ({ onCardClick }) => {
               <div className="w-auto h-auto flex flex-col items-start justify-center gap-6 px-4">
                 <h2>UI Design, {card.date}</h2>
                 <h2 className="font-bold text-2xl">{card.title}</h2>
-                <SeeMoreButton text="See More" />
+                <SeeMoreButton
+                  text="See More"
+                  onClick={() => onCardClick(card)}
+                />
               </div>
             </div>
           ))}
         </div>
-
         {/* See More Button */}
         {visibleCard < CardData.length && (
           <div className="w-full flex justify-center mt-4">

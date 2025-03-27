@@ -34,11 +34,8 @@ import BlogDetailPage from "../components/Card/blogCardDetail";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const HomePage = () => {
-  // const [showDetailPage, setShowDetailPage] = useState(false);
   const [showDetailPage, setShowDetailPage] = useState(false);
-  // const [showDetailBlogPage, setShowDetailBlogPage] = useState(false);
   const [detailType, setDetailType] = useState(null);
-
   const [menuOpen, setMenuOpen] = useState(false);
   const introduceRef = useRef(null);
   const aboutRef = useRef(null);
