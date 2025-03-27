@@ -160,31 +160,35 @@ const HomePage = () => {
         <button
           onClick={() => handleMenuClick(introduceRef)}
           className="rounded-full bg-orange-500 p-2"
+          title="Home"
         >
           <img src={homeIcon} alt="Home" width={20} height={20} />
         </button>
-        <button onClick={() => handleMenuClick(aboutRef)}>
+        <button onClick={() => handleMenuClick(aboutRef)} title="About">
           <img src={aboutIcon} alt="About" width={20} height={20} />
         </button>
-        <button onClick={() => handleMenuClick(serviceRef)}>
+        <button onClick={() => handleMenuClick(serviceRef)} title="Service">
           <img src={serviceIcon} alt="Service" width={20} height={20} />
         </button>
-        <button onClick={() => handleMenuClick(skillRef)}>
+        <button onClick={() => handleMenuClick(skillRef)} title="Skill">
           <img src={skillIcon} alt="skill" width={20} height={20} />
         </button>
-        <button onClick={() => handleMenuClick(resumeRef)}>
+        <button onClick={() => handleMenuClick(resumeRef)} title="Resume">
           <img src={resumeIcon} alt="resume" width={20} height={20} />
         </button>
-        <button onClick={() => handleMenuClick(featuresRef)}>
+        <button onClick={() => handleMenuClick(featuresRef)} title="Portfolio">
           <img src={portfolioIcon} alt="portfolio" width={20} height={20} />
         </button>
-        <button onClick={() => handleMenuClick(blogRef)}>
+        <button onClick={() => handleMenuClick(blogRef)} title="Blog">
           <img src={blogIcon} alt="blog" width={20} height={20} />
         </button>
-        <button onClick={() => handleMenuClick(testimonailRef)}>
+        <button
+          onClick={() => handleMenuClick(testimonailRef)}
+          title="Testimonail"
+        >
           <img src={testimonailIcon} alt="Testimonail" width={20} height={20} />
         </button>
-        <button onClick={() => handleMenuClick(contactRef)}>
+        <button onClick={() => handleMenuClick(contactRef)} title="Contact">
           <img src={ContactIcon} alt="contactRef" width={20} height={20} />
         </button>
         <button onClick={() => handleMenuClick(contactRef)}>
