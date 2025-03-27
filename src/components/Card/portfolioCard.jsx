@@ -98,9 +98,9 @@ const PortfolioCard = ({
       onClick={onClick}
     >
       {/* Hover Effects */}
-      <div className="absolute top-0 right-0 w-1/5 h-1/5 bg-blue-200 opacity-50 rounded-br-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-lg"></div>
-      <div className="absolute bottom-0 left-0 w-1/5 h-1/5 bg-blue-200 opacity-50 rounded-tl-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-lg flex items-center justify-center">
-        <span className="hidden group-hover:block text-orange-500 font-bold">
+      <div className="absolute top-0 right-0 w-1/5 h-1/5 bg-gray-500 opacity-50 rounded-br-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-lg"></div>
+      <div className="absolute bottom-0 left-0 w-1/5 h-1/5 bg-gray-500 opacity-50 rounded-tl-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-lg flex items-center justify-center">
+        <span className="hidden group-hover:block text-white opacity-100  text-stroke text-stroke-white text-stroke-2 font-bold text-4xl flex items-center justify-center">
           Design Specialization
         </span>
       </div>
