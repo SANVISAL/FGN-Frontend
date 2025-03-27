@@ -1,13 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import profile from "../../assets/profile.svg";
-import loginImage from "../../assets/loginImage.jpg";
-const PortfolioCard = ({
-  width = "700px",
-  height = "320px",
-  image,
-  onclick,
-}) => {
+const BlogCard = ({ width = "700px", height = "320px", image, onclick }) => {
   return (
     <StyledWrapper
       width={width}
@@ -77,4 +70,4 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default PortfolioCard;
+export default BlogCard;

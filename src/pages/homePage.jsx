@@ -30,10 +30,15 @@ import htmllogo from "../assets/logo/html.svg";
 import "swiper/css/pagination";
 import "swiper/css";
 import PortfolioDetailPage from "../components/Card/portfolioDetailCard";
+import BlogDetailPage from "../components/Card/blogCardDetail";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const HomePage = () => {
+  // const [showDetailPage, setShowDetailPage] = useState(false);
   const [showDetailPage, setShowDetailPage] = useState(false);
+  // const [showDetailBlogPage, setShowDetailBlogPage] = useState(false);
+  const [detailType, setDetailType] = useState(null);
+
   const [menuOpen, setMenuOpen] = useState(false);
   const introduceRef = useRef(null);
   const aboutRef = useRef(null);
@@ -57,7 +62,6 @@ const HomePage = () => {
       ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-
   return (
     <div className="w-screen min-h-screen bg-black flex flex-col lg:flex-row px-2 lg:px-8 gap-8 lg:gap-14">
       {/* profile */}
@@ -99,10 +103,23 @@ const HomePage = () => {
       {/*slide section */}
       <div className="w-full lg:w-[60%] h-auto flex flex-col py-8 px-6 lg:py-16 gap-4">
         {showDetailPage ? (
-          <PortfolioDetailPage onBack={() => setShowDetailPage(false)} />
+          detailType === "portfolio" ? (
+            <PortfolioDetailPage
+              onBack={() => {
+                setShowDetailPage(false);
+                setDetailType(null);
+              }}
+            />
+          ) : detailType === "blog" ? (
+            <BlogDetailPage
+              onBack={() => {
+                setShowDetailPage(false);
+                setDetailType(null);
+              }}
+            />
+          ) : null
         ) : (
           <>
-            {" "}
             <div ref={introduceRef}>
               <IntroducePage />
             </div>
@@ -120,7 +137,12 @@ const HomePage = () => {
             </div>
             <div ref={featuresRef}>
               {currentPage === "portfolio" ? (
-                <PortfolioPage onCardClick={() => setShowDetailPage(true)} />
+                <PortfolioPage
+                  onCardClick={() => {
+                    setShowDetailPage(true);
+                    setDetailType("portfolio");
+                  }}
+                />
               ) : (
                 <PortfolioDetailPage
                   onBack={() => setCurrentPage("portfolio")}
@@ -129,9 +151,14 @@ const HomePage = () => {
             </div>
             <div ref={blogRef}>
               {currentPages === "blog" ? (
-                <BlogPage onCardClick={() => setShowDetailPage(true)} />
+                <BlogPage
+                  onCardClick={() => {
+                    setShowDetailPage(true);
+                    setDetailType("blog");
+                  }}
+                />
               ) : (
-                <BlogPage onBack={() => setCurrentPages("blog")} />
+                <setShowDetailPage onBack={() => setCurrentPages("blog")} />
               )}
             </div>
             <div ref={testimonailRef}>

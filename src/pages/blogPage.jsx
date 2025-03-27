@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Label, PortfolioCard, SeeMoreButton } from "../components";
+import { Label, SeeMoreButton, BlogCard } from "../components";
 import { loginImage } from "../assets";
 import blogIcon from "../assets/menuIcon/blogIcon.svg";
 
@@ -31,7 +31,6 @@ const BlogPage = ({ onCardClick }) => {
   return (
     <div className="w-full h-auto bg-gray-900 flex flex-col rounded-xl py-8 px-8 gap-6">
       <Label Icon={blogIcon} text="BLOG " />
-
       <div className="w-full h-auto flex flex-col gap-6">
         <div className="w-full font-bold flex flex-row gap-3">
           <h2 className="text-5xl">Latest</h2>
@@ -51,11 +50,11 @@ const BlogPage = ({ onCardClick }) => {
               className="w-full h-auto flex lg:flex-row flex-col bg-gray-600 border border-gray-600 items-center justify-center gap-4 rounded-xl"
             >
               <div className="w-auto h-auto">
-                <PortfolioCard
+                <BlogCard
                   width="350px"
                   height="320px"
                   image={loginImage}
-                  onClick={onCardClick}
+                  onclick={onCardClick}
                 />
               </div>
               <div className="w-auto h-auto flex flex-col items-start justify-center gap-6 px-4">

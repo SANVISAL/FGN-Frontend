@@ -22,3 +22,4 @@ export { default as TextAnimation } from "./text/textAnimation";
 export { default as ShareButton } from "./buttons/shareButton";
 export { default as Line } from "./text/line";
 export { default as Loader } from "./Form/loading";
+export { default as BlogCard } from "./Card/blogCard";
