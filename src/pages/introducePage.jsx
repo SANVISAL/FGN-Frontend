@@ -4,7 +4,7 @@ import React from "react";
 
 const IntroducePage = () => {
   return (
-    <div className="w-full h-auto flex flex-col bg-gray-900 rounded-xl py-8 px-8 gap-6">
+    <div className="w-full h-auto flex flex-col bg-gray-900 border border-orange-600 rounded-xl py-8 px-8 gap-6">
       <div className="w-auto h-auto flex flex-row gap-2">
         <div className="w-auto h-auto flex flex-col gap-12">
           <Label Icon={homeIcon} text="INTRODUCE" />

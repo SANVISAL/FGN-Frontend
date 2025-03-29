@@ -18,17 +18,6 @@ const CardData = [
 
 const BlogPage = ({ onCardClick }) => {
   const [visibleCard, setVisibleCard] = useState(3);
-  // const [showDetailPage, setShowDetailPage] = useState(false);
-  // const handleMenuClick = (index) => {
-  //   if (showDetailPage) {
-  //     setShowDetailPage(false); // Reset to normal view
-  //     setTimeout(() => {
-  //       ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  //     }, 300);
-  //   } else {
-  //     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  //   }
-  // };
   const handleSeeMore = () => {
     setVisibleCard((prev) => Math.min(prev + 3, CardData.length));
   };
@@ -39,7 +28,7 @@ const BlogPage = ({ onCardClick }) => {
   }
 
   return (
-    <div className="w-full h-auto bg-gray-900 flex flex-col rounded-xl py-8 px-8 gap-6">
+    <div className="w-full h-auto bg-gray-900 border border-orange-600 flex flex-col rounded-xl py-8 px-8 gap-6">
       <Label Icon={blogIcon} text="BLOG " />
       <div className="w-full h-auto flex flex-col gap-6">
         <div className="w-full font-bold flex flex-row gap-3">

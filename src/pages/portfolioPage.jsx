@@ -9,7 +9,7 @@ const PortfolioPage = ({ onCardClick }) => {
     return null;
   }
   return (
-    <div className="w-auto h-auto bg-gray-900 flex flex-col rounded-xl  py-8 px-8 gap-6 ">
+    <div className="w-auto h-auto bg-gray-900 flex  border border-orange-600  flex-col rounded-xl  py-8 px-8 gap-6 ">
       <Label Icon={portfolioIcon} text="Portfolio " />
       <div className="w-full h-auto flex flex-col gap-6">
         <div className="w-full h-auto font-bold flex flex-row gap-3">

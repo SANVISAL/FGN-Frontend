@@ -8,7 +8,7 @@ import Icon04 from "../assets/menuIcon/serviceIcon/Icon04.svg";
 import serviceIcon from "../assets/menuIcon/serviceIcon.svg";
 const ServicePage = () => {
   return (
-    <div className="w-full h-auto bg-gray-900 flex flex-col rounded-xl  py-8 px-8 gap-10 ">
+    <div className="w-full h-auto bg-gray-900 flex flex-col rounded-xl  border border-orange-600  py-8 px-8 gap-10 ">
       <Label Icon={serviceIcon} text="Service" />
       <div className="w-full h-auto flex flex-col gap-6">
         <div className="w-full h-[15%] font-bold flex flex-row gap-3">

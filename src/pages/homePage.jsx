@@ -4,6 +4,7 @@ import {
   CircularProgress,
   DownloadButton,
   TextAnimation,
+  ShareButton,
 } from "../components";
 import {
   profile,
@@ -62,7 +63,7 @@ const HomePage = () => {
   return (
     <div className="w-screen min-h-screen bg-black flex flex-col lg:flex-row px-2 lg:px-8 gap-8 lg:gap-14">
       {/* profile */}
-      <div className="lg:sticky  lg:top-0 top-32  w-full  lg:w-[25%] h-auto lg:h-screen bg-gray-900 flex flex-col rounded-lg px-2 gap-3 py lg:py-0 py-20">
+      <div className="lg:sticky  lg:top-0 top-32  w-full border border-orange-600 lg:w-[25%] h-auto lg:h-screen bg-gray-900 flex flex-col rounded-lg px-2 gap-3 py lg:py-0 py-20">
         <div className="w-full h-auto lg:h-[40%] flex flex-col items-center rounded-lg">
           <CustomImage src={profile} alt="image" width={150} height={150} />
           <h2 className="text-2xl font-bold">FIRST GEN NET</h2>
@@ -173,7 +174,7 @@ const HomePage = () => {
       </div>
 
       {/* menu */}
-      <div className="lg:sticky  lg:top-0 lg:w-[6%] w-full h-full lg:h-screen border-2 border-orange-500 flex flex-row lg:flex-col items-center justify-center gap-2 rounded-full  py-4 lg:py-6 hidden md:flex">
+      <div className="lg:sticky  lg:top-0 lg:w-[6%] w-full h-full lg:h-screen border border-orange-500 flex flex-row lg:flex-col items-center justify-center gap-2 rounded-full  py-4 lg:py-6 hidden md:flex">
         <CustomImage
           onClick={() => handleMenuClick(introduceRef)}
           src={profile}
@@ -215,9 +216,13 @@ const HomePage = () => {
         <button onClick={() => handleMenuClick(contactRef)} title="Contact">
           <img src={ContactIcon} alt="contactRef" width={20} height={20} />
         </button>
-        <button onClick={() => handleMenuClick(contactRef)}>
-          <img src={aboutIcon} alt="Setting" width={20} height={20} />
-        </button>
+        {/* <button onClick={() => handleMenuClick(contactRef)}> */}
+        {/* <img src={aboutIcon} alt="Setting" width={20} height={20} /> */}
+        <div className="w-[50px] h-[50px] flex items-center justify-center">
+          <ShareButton />
+        </div>
+
+        {/* </button> */}
         {/* <ShareButton /> */}
       </div>
       {/* buger menu */}

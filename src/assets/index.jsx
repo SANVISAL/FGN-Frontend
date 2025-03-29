@@ -9,6 +9,7 @@ import ContactIcon from "../assets/menuIcon/ContactIcon.svg";
 import resumeIcon from "../assets/menuIcon/resumeIcon.svg";
 import testimonailIcon from "../assets/menuIcon/testimonailIcon.svg";
 import loginImage from "../assets/menuIcon/loginImage.jpg";
+import shareIcon from "../assets/menuIcon/shareIcon.svg";
 export {
   profile,
   homeIcon,
@@ -21,4 +22,5 @@ export {
   resumeIcon,
   testimonailIcon,
   loginImage,
+  shareIcon,
 };

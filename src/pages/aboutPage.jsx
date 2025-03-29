@@ -5,7 +5,7 @@ import { StatsSection } from "../components";
 
 const AboutPage = () => {
   return (
-    <div className="w-full h-auto bg-gray-900 flex flex-col rounded-xl  py-8 px-8 gap-10 ">
+    <div className="w-full h-auto bg-gray-900 border border-orange-600 flex flex-col rounded-xl  py-8 px-8 gap-10 ">
       <div className="w-full h-[6%]">
         <Label Icon={aboutIcon} text="ABOUT" />
       </div>
