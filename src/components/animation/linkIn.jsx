@@ -1,28 +1,20 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-const FaceBookButton = () => {
+const Button = () => {
   return (
     <StyledWrapper>
       <button className="LinkedinBtn">
         <span className="svgContainer">
-          <svg
-            viewBox="0 0 24 24"
-            height={40}
-            width={40}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"
-              fill="#ffffff"
-            />
+          <svg viewBox="0 0 24 24" height={24} width={24} xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
           </svg>
         </span>
         <span className="BG" />
       </button>
     </StyledWrapper>
   );
-};
+}
 
 const StyledWrapper = styled.div`
   .LinkedinBtn {
@@ -58,7 +50,7 @@ const StyledWrapper = styled.div`
     content: "";
     width: 100%;
     height: 100%;
-    background: #0165e1;
+    background: #0077b5;
     z-index: -1;
     border-radius: 9px;
     pointer-events: none;
@@ -76,7 +68,6 @@ const StyledWrapper = styled.div`
 
   .LinkedinBtn:hover .svgContainer {
     background-color: rgba(156, 156, 156, 0.466);
-  }
-`;
+  }`;
 
-export default FaceBookButton;
+export default Button;
