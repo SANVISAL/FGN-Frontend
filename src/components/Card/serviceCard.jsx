@@ -3,7 +3,7 @@ import NumberComponent from "../number/number";
 
 const ServiceCard = ({ number, text, Icon }) => {
   return (
-    <div className="lg:w-80 w-full border-1 border-orange-500 bg-gray-800 shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 relative  overflow-hidden">
+    <div className="lg:w-80 w-full border-1 border-orange-500 bg-gray-800 shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 relative flex flex-col gap-4  overflow-hidden">
       <div className="w-full h-[20%] flex flex-row justify-between">
         <NumberComponent number={number} />
         <div className="fill-violet-500 w-12">

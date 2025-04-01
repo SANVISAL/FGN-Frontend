@@ -79,7 +79,9 @@ export default function CardSlider() {
           onClick={prevSlide}
           className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600"
         >
-          <FaArrowLeft />
+          <p>
+            <FaArrowLeft />
+          </p>
         </button>
 
         <span className="text-gray-400">
@@ -90,7 +92,10 @@ export default function CardSlider() {
           onClick={nextSlide}
           className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600"
         >
-          <FaArrowRight />
+          {/* <FaArrowRight color="white" size={20} /> */}
+          <p>
+            <FaArrowRight />
+          </p>
         </button>
       </div>
     </div>

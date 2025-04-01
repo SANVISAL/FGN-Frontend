@@ -3,7 +3,7 @@ import { Label, ImageSlider } from "../components";
 import skillIcon from "../assets/menuIcon/skillIcon.svg";
 const SkillPage = () => {
   return (
-    <div className="w-full h-auto bg-gray-900 flex flex-col rounded-xl  py-8 px-8 gap-10 ">
+    <div className="w-full h-auto bg-gray-800 flex border border-gray-800   flex-col rounded-xl  py-8 px-8 gap-10 ">
       <Label Icon={skillIcon} text="Skill" />
       <div className="w-full h-auto flex flex-col gap-14">
         <div className="w-full h-[15%] font-bold flex flex-row gap-3">

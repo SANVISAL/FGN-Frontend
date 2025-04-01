@@ -110,3 +110,76 @@ button:focus-visible {
 .animate-blink {
   animation: blink 0.5s step-end infinite;
 }
+
+/* for opening animation */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.intro {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animate {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: mistyrose;
+  transform: scale(0, 0);
+  animation: animate 1s ease-in forwards;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+  overflow-y: auto;
+}
+.fadeIn {
+  color: orangered;
+  font-size: 2rem;
+  animation: fadeInText 2s ease-in forwards; /* Increased duration */
+}
+@keyframes animate {
+  0% {
+    transform: scale(0, 0.005);
+  }
+  50% {
+    transform: scaleY(0.005);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

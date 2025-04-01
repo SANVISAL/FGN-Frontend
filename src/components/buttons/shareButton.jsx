@@ -1,57 +1,102 @@
-import React, { useState } from "react";
-
+import React from "react";
+import styled from "styled-components";
+import { shareIcon } from "../../assets";
+import FaceBookButton from "../animation/facebook";
+import InstagramButton from "../animation/instagram";
+import LinkIn from "../animation/linkIn";
 const ShareButton = () => {
-  const [checked, setChecked] = useState(false); // state to manage visibility of options
-
-  const handleChange = () => {
-    setChecked(!checked); // toggle visibility state when main button is clicked
-  };
-
   return (
-    <div className="relative flex justify-center items-center">
-      {/* Main Button (Icon + / -) */}
-      <div
-        className={`cursor-pointer absolute bg-yellow-400 border-2 border-gray-800 text-gray-800 text-3xl font-bold w-[50px] h-[50px] rounded-full flex justify-center items-center shadow-lg transition-all duration-300 ${
-          checked ? "bg-yellow-300 scale-95" : "scale-100"
-        }`}
-        onClick={handleChange} // click handler to toggle checked state
-      >
-        {checked ? "-" : "+"} {/* Show "+" when hidden, "-" when visible */}
+    <StyledWrapper>
+      <div className="menu-container flex items-center justify-center">
+        <input type="checkbox" className="checkbox" />
+        <div className="button-menu">
+          <img src={shareIcon} alt="share" width={20} height={20} />
+        </div>
+        <div className="option-a option flex items-center justify-center">
+          <FaceBookButton />
+        </div>
+        <div className="option-b option flex items-center justify-center">
+          {/* B */}
+          <InstagramButton />
+        </div>
+        <div className="option-c option flex items-center justify-center">
+          <LinkIn />
+        </div>
       </div>
-
-      {/* Option Buttons Container */}
-      <div
-        className={`absolute transition-all duration-300 ease-in-out ${
-          checked ? "opacity-100 visible" : "opacity-0 invisible" // controls visibility of option buttons
-        }`}
-      >
-        {/* Option A */}
-        <button
-          className={`option option-a bg-gray-800 border-2 border-yellow-400 text-yellow-400 w-16 h-16 rounded-full font-bold shadow-lg mb-4 ${
-            checked ? "translate-y-[-90px]" : ""
-          }`}
-        >
-          A
-        </button>
-        {/* Option B */}
-        <button
-          className={`option option-b bg-gray-800 border-2 border-yellow-400 text-yellow-400 w-16 h-16 rounded-full font-bold shadow-lg mb-4 ml-16 ${
-            checked ? "translate-y-[-65px] translate-x-[65px]" : ""
-          }`}
-        >
-          B
-        </button>
-        {/* Option C */}
-        <button
-          className={`option option-c bg-gray-800 border-2 border-yellow-400 text-yellow-400 w-16 h-16 rounded-full font-bold shadow-lg ml-32 ${
-            checked ? "translate-x-[90px]" : ""
-          }`}
-        >
-          C
-        </button>
-      </div>
-    </div>
+    </StyledWrapper>
   );
 };
+
+const StyledWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .menu-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+
+  .button-menu {
+    position: absolute;
+    z-index: 2;
+    background-color: #000;
+    color: #1e1e1e;
+    font-size: 30px;
+    font-weight: 700;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px rgba(16, 16, 16, 0.5);
+  }
+
+  .checkbox {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  .option {
+    position: absolute;
+    color: #ffdd00;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 10px rgba(16, 16, 16, 0.5);
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  .checkbox:checked ~ .option {
+    opacity: 1;
+  }
+
+  .checkbox:checked ~ .option-a {
+    transition-delay: 0.1s;
+    transform: translateX(-60px);
+  }
+
+  .checkbox:checked ~ .option-b {
+    transition-delay: 0.2s;
+    transform: translateX(-110px);
+  }
+
+  .checkbox:checked ~ .option-c {
+    transition-delay: 0.3s;
+    transform: translateX(-160px);
+  }
+`;
 
 export default ShareButton;
