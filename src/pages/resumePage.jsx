@@ -3,7 +3,7 @@ import { Label, Line } from "../components";
 import resumeIcon from "../assets/menuIcon/resumeIcon.svg";
 const ResumePage = () => {
   return (
-    <div className="w-full h-auto bg-gray-900 flex flex-col  border border-orange-600  rounded-xl  py-8 px-8 gap-10 ">
+    <div className="w-full h-auto bg-gray-800 flex flex-col  border border-gray-800  rounded-xl  py-8 px-8 gap-10 ">
       <Label Icon={resumeIcon} text="Resume" />
       <div className="w-full h-auto flex flex-col gap-6 relative">
         <div className="w-full h-[15%] font-bold flex flex-row gap-3">

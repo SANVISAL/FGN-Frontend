@@ -3,7 +3,7 @@ import { Label, CardSlider } from "../components";
 import testimonailIcon from "../assets/menuIcon/testimonailIcon.svg";
 const TestimonailPage = () => {
   return (
-    <div className="w-full h-auto bg-gray-900  border border-orange-600  flex flex-col rounded-xl  py-8 px-8 gap-10 ">
+    <div className="w-full h-auto bg-gray-800  border border-gray-800  flex flex-col rounded-xl  py-8 px-8 gap-10 ">
       <Label Icon={testimonailIcon} text="TESTIMONIAL" />
       <div className="w-full h-auto flex flex-col gap-12">
         <div className="w-full h-[15%] font-bold flex flex-row gap-3">

@@ -27,7 +27,7 @@ const TextAnimation = () => {
 
   return (
     <div className="relative w-full text-white font-mono text-lg">
-      <span className="border-r-2 border-white animate-blink text-orange-500">
+      <span className="border-r-2 border-white animate-blink text-green-500">
         {displayedText}
       </span>
     </div>

@@ -2,13 +2,14 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import SkillPercent from "../../components/CircularProgress/skillPercent";
 import html from "../../assets/logo/html.svg";
+import { csslogo, jslogo, tailwind } from "../../assets";
 import skillIcon from "../../assets/menuIcon/skillIcon.svg";
 import { motion, AnimatePresence } from "framer-motion";
 const images = [
   <SkillPercent images={html} value={90} text={"HTML"} isCurved={true} />,
-  <SkillPercent images={html} value={50} text={"HTML"} />,
-  <SkillPercent images={html} value={60} text={"HTML"} />,
-  <SkillPercent images={html} value={90} text={"HTML"} />,
+  <SkillPercent images={csslogo} value={60} text={"CSS"} />,
+  <SkillPercent images={jslogo} value={60} text={"JS"} />,
+  <SkillPercent images={tailwind} value={90} text={"Tailwind"} />,
   <SkillPercent images={html} value={20} text={"HTML"} />,
   <SkillPercent images={html} value={90} text={"HTML"} />,
   <SkillPercent images={html} value={80} text={"HTML"} />,

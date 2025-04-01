@@ -12,9 +12,6 @@ const ShareButton = () => {
         <div className="button-menu">
           <img src={shareIcon} alt="share" width={20} height={20} />
         </div>
-        {/* <button className="option-a option flex items-center justify-center">
-          <FaceBookButton />
-        </button> */}
         <div className="option-a option flex items-center justify-center">
           <FaceBookButton />
         </div>
