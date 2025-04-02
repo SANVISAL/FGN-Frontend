@@ -1,10 +1,10 @@
 import React from "react";
 import { ContactForm, Label, GoogleMapCard } from "../components";
-import contactIcon from "../assets/menuIcon/contactIcon.svg";
+import { ContactIcon } from "../assets";
 const ContactPage = () => {
   return (
     <div className="w-full h-auto  border  bg-gray-800 flex flex-col rounded-xl py-8 px-8 gap-10 ">
-      <Label Icon={contactIcon} text="Contact Us" />
+      <Label Icon={ContactIcon} text="Contact Us" />
       <div className="w-full h-auto flex flex-col gap-6">
         <div className="w-full h-auto font-bold flex flex-row gap-3">
           <h1>Contact</h1>
